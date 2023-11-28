@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
 {
-    #[Route('/hello/{name}', name: 'app_home')]
+    #[Route('/hello/{name}', name: 'app_home', defaults:['name' => 'Riri'])]
     public function index($name): Response
     {
         //echo $name;
